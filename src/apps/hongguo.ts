@@ -1,9 +1,42 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
-  id: 'com.hongguo.android',
+  id: 'com.dragon.read',
   name: '红果免费短剧',
   groups: [
-    // 这里后面我们写具体的跳过广告规则
+    {
+      key: 1,
+      name: '开屏广告自动跳过',
+      desc: '自动点击开屏广告的跳过按钮',
+      rules: [
+        {
+          matches: '[text*="跳过"][text.length<10]',
+          fastQuery: true,
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '自动上滑继续看短剧',
+      desc: '出现上滑提示时自动上滑跳过广告',
+      rules: [
+        {
+          swipeArg: {
+            start: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.7',
+            },
+            end: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.3',
+            },
+            duration: 200,
+          },
+          matches: '[text="上滑继续观看短剧"][visibleToUser=true]',
+          fastQuery: true,
+          activityIds: 'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
+        },
+      ],
+    },
   ],
 });
