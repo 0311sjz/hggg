@@ -23,8 +23,14 @@ export default defineGkdApp({
         {
           fastQuery: true,
           swipeArg: {
-            start: { x: 'screenWidth/2', y: 'screenHeight * 0.7' },
-            end: { x: 'screenWidth/2', y: 'screenHeight * 0.3' },
+            start: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.7',
+            },
+            end: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.3',
+            },
             duration: 200,
           },
           activityIds:
@@ -39,20 +45,27 @@ export default defineGkdApp({
     {
       key: 3,
       name: '功能类-自动[上滑]继续看短剧(播放页)',
-      desc: '播放页底部[上滑继续看短剧]提示时自动上滑',
+      desc: '播放页底部进度条出现时自动上滑继续',
       rules: [
         {
           fastQuery: true,
           swipeArg: {
-            start: { x: 'screenWidth/2', y: 'screenHeight * 0.9' },
-            end: { x: 'screenWidth/2', y: 'screenHeight * 0.5' },
+            start: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.9',
+            },
+            end: {
+              x: 'screenWidth/2',
+              y: 'screenHeight * 0.5',
+            },
             duration: 200,
           },
           activityIds:
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
-          matches: '[text="上滑继续看短剧"][visibleToUser=true]',
+          matches: '[vid="hcg"][visibleToUser=true]',
         },
       ],
     },
   ],
 });
+
