@@ -21,7 +21,9 @@ export default defineGkdApp({
       desc: '出现上滑提示时自动上滑跳过广告',
       rules: [
         {
-          swipeArg: {
+          matches: '[text="上滑继续观看短剧"][visibleToUser=true]',
+          fastQuery: true,
+          swipeArgs: {
             start: {
               x: 'screenWidth/2',
               y: 'screenHeight * 0.7',
@@ -32,8 +34,6 @@ export default defineGkdApp({
             },
             duration: 200,
           },
-          matches: '[text="上滑继续观看短剧"][visibleToUser=true]',
-          fastQuery: true,
         },
       ],
     },
