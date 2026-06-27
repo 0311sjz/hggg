@@ -1,7 +1,7 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
-  id: 'com.dragon.read',
+  id: 'com.phoenix.read',
   name: '红果免费短剧',
   groups: [
     {
@@ -34,7 +34,6 @@ export default defineGkdApp({
           },
           matches: '[text="上滑继续观看短剧"][visibleToUser=true]',
           fastQuery: true,
-          activityIds: 'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
         },
       ],
     },
