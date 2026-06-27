@@ -10,7 +10,7 @@ export default defineGkdApp({
       desc: '自动点击开屏广告的跳过按钮',
       rules: [
         {
-          matches: '[text*="跳过"][text.length<10]',
+          matches: ['[text*="跳过"][text.length<10]'],
           fastQuery: true,
         },
       ],
@@ -21,9 +21,10 @@ export default defineGkdApp({
       desc: '出现上滑提示时自动上滑跳过广告',
       rules: [
         {
-          matches: '[text="上滑继续观看短剧"][visibleToUser=true]',
+          matches: ['[text="上滑继续观看短剧"][visibleToUser=true]'],
           fastQuery: true,
-          swipeArgs: {
+          // @ts-ignore 兼容类型定义
+          swipeArg: {
             start: {
               x: 'screenWidth/2',
               y: 'screenHeight * 0.7',
