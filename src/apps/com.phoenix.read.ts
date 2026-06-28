@@ -36,9 +36,13 @@ export default defineGkdApp({
           activityIds:
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
           anyMatches: ['[vid="ise"][visibleToUser=true]'],
-          excludeMatches: ['[vid="hrc"][visibleToUser=true]'],
+          excludeMatches: [
+            '[vid="hrc"][visibleToUser=true]',
+            '[vid="title"][visibleToUser=true]',
+          ],
         },
       ],
     },
   ],
 });
+
