@@ -1,13 +1,13 @@
-import { defineGkdSubscription } from '@gkd-kit/define';
+﻿import { defineGkdSubscription } from '@gkd-kit/define';
 import { batchImportApps } from '@gkd-kit/tools';
 import categories from './categories';
 import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
   id: 861088095,
-  name: 'Subscription',
+  name: '红果免费短剧跳过',
   version: 0,
-  author: 'author',
+  author: 'sjz0311',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/gkd-kit/subscription-template',
   categories,
